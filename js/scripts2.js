@@ -70,29 +70,49 @@ const numberBtns = document
     });
   });
 
-// $('.numbers').click(function() {
-//   /*        If the equal key was just pressed clean up is needed:
-//             reset the number to key that was just pressed
-//             reset screen to number variable value
-//             set equalJustPressed to false*/
-//   if (equalJustPressed) {
-//     number = $(this).text();
-//     totaldiv.text(number);
-//     equalJustPressed = false;
-//     return;
-//   }
+const plusMinusBtn = document
+  .getElementById('plusminus')
+  .addEventListener('click', function() {
+    if (plusMinus === '') {
+      number = '-' + number;
+      totaldiv.innerHTML = number;
+      plusMinus = '-';
+    } else {
+      number = number.replace('-', '');
+      totaldiv.innerHTML = number;
+      plusMinus = '';
+    }
+    console.log(this.innerHTML);
+  });
 
-//   if (number === '' && $(this).text() === '0') {
-//     return;
-//   }
+const percentageBtn = document
+  .getElementById('percentage')
+  .addEventListener('click', function() {
+    if (newnumber === '') {
+      resetValue();
+    } else if (number === '') {
+      number = (
+        (parseFloat(newnumber) * parseFloat(newnumber)) /
+        100
+      ).toString();
+    }
+  });
 
-//   number += $(this).text();
-//   totaldiv.innerHTML = number;
-//   testNumLength(number);
-//   operatorJustPressed = false;
-//   /*TEST Variables in console*/
-//   testVariables();
-// });
+  const dotBtn = document
+  .getElementById('dot')
+  .addEventListener('click', function() {
+    if (dotPressed){
+      return;
+    }
+
+    if(number === ''){
+      number = '0' + this.innerHTML
+    } else {
+      number += this.innerHTML;
+    }
+    totaldiv.innerHTML = number;
+    dotPressed = true;
+  })
 
 function testVariables() {
   console.clear();
@@ -104,4 +124,16 @@ function testVariables() {
   console.log('equalJustPressed: ' + equalJustPressed);
   console.log('operatorJustPressed: ' + operatorJustPressed);
   console.log('calculatedTotal: ' + calculatedTotal);
+}
+
+function resetValue() {
+  number = '';
+  dotPressed = false;
+  totaldiv.innerHTML = '0';
+  selectedOperator.innerHTML = '';
+  equalJustPressed = false;
+  operatorJustPressed = false;
+  //$('#mr, #mc, #ms').addClass('disableClick');
+  dotPressed = false;
+  testVariables();
 }

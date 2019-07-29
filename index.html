@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Calculator - FreeCodeCamp</title>
     <link href="ext/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="css/darkstyles.css" rel="stylesheet" type="text/css" />
+    <link href="css/toggle.css" rel="stylesheet" type="text/css" />
     <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
 </head>
 
@@ -16,6 +17,14 @@
   </div>
     <div id="calculator">
         <div id="total"></div>
+
+        <div id="toggle">
+
+                    <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+        </div>
         
         <div>
             <span id="selectedOperator">
@@ -31,9 +40,9 @@
         </div>
         
         <div>            
-            <a class="btn clearall">AC</a>
-            <a class="btn clear">C</a>
-            <a class="btn percentage">&#37;</a>
+            <a class="btn" id="clearall">AC</a>
+            <a class="btn" id="clear">C</a>
+            <a class="btn" id ="percentage">&#37;</a>
             <a class="btn operators">&divide;</a> <!--Division Operator -->
             <a class="btn numbers">7</a>
             <a class="btn numbers">8</a>
@@ -47,10 +56,10 @@
             <a class="btn numbers">2</a>
             <a class="btn numbers">3</a>
             <a class="btn operators">&plus;</a> <!--Addition Operator -->
-            <a class="btn plusminus">&plusmn;</a> <!--Plus/Minus Operator -->
+            <a class="btn" id="plusminus">&plusmn;</a> <!--Plus/Minus Operator -->
             <a class="btn numbers">0</a>
-            <a class="btn dot">&#46;</a> <!--Decimal Point -->
-            <a class="btn equal">&#61;</a> <!--Equal Key-->
+            <a class="btn" id="dot">&#46;</a> <!--Decimal Point -->
+            <a class="btn" id="equal">&#61;</a> <!--Equal Key-->
         </div>
     </div>
 
