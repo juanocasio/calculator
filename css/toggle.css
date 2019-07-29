@@ -3,6 +3,8 @@
     display: inline-block;
     width: 28px;
     height: 15px;
+    vertical-align: bottom;
+    margin-left: 5px;
   }
   
   .switch input { 
@@ -18,7 +20,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    border: 2px black;
+    background-color: #aaa;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -36,7 +39,7 @@
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: rgb(14, 48, 77);
   }
   
   input:focus + .slider {
@@ -56,11 +59,15 @@
   
   .slider.round:before {
     border-radius: 50%;
+   
   }
 
 .toggle {
     display: table-cell;
     vertical-align: middle;
-    margin-top: 5px;
-    height: 15px;
+
+}
+
+.togglelabel {
+  font-size: 5px; 
 }
