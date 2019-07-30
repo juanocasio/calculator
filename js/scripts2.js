@@ -29,6 +29,20 @@ const testNumLength = function(number) {
 
 totaldiv.innerText = '0';
 
+const switchToggle = document
+.getElementById('switchtoggle')
+.addEventListener('change', function(){
+  const pageStyle = document.getElementById('pagestyle');
+  // @ts-ignore
+  if (this.checked){
+    pageStyle.setAttribute('href','css/lightstyles.css');
+  }else{
+    pageStyle.setAttribute('href','css/darkstyles.css');
+  }
+  console.log(this);
+});
+
+
 const calcFunctionBtns = document
   .querySelectorAll('#calcfunctions a')
   .forEach(function(item) {
