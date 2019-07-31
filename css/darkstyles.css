@@ -4,39 +4,18 @@
  
 /*Main styles for entire page*/
 body, a {
-    padding:0;
-    margin:0;
     font-family: "Karla","Trebuchet MS", Arial, Helvetica, sans-serif;
-    background-color: #fff;
-    color: #ccc;
 	font-size: 20px;
 }
 
-a {
-    cursor:pointer;
-}
-
-
-/*Test */
-.header{
-  height: 100px;
-}
 
 /*Styles for Calculator*/
 #calculator {
-	width: 310px;
-	height: 500px;
-	margin: 10px auto;
-	padding: 5px;
-    border: 1px solid #333;
-	border-radius: 10px;
     background: -webkit-linear-gradient( left,  #4d4d4d 0%,#6f6f6f 33%,#6f6f6f 66%,#4d4d4d 100%);
     background:    -moz-linear-gradient(left,  #4d4d4d 0%,#6f6f6f 33%,#6f6f6f 66%,#4d4d4d 100%);
     background:         linear-gradient(left,  #4d4d4d 0%,#6f6f6f 33%,#6f6f6f 66%,#4d4d4d 100%);
     box-shadow:-2px -2px 9px rgba(0, 0, 0, 0.7), 
          -4px -4px 20px rgba(0, 0, 0, 0.4);
-  z-index:2;
-    
 }
 
 /*Display Screen*/
@@ -55,7 +34,7 @@ a {
     padding: 0 10px;
     border-radius: 10px;
      z-index: -5;
-}
+  }
 
 #selectedOperator {
     float: left;
