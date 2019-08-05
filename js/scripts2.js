@@ -55,7 +55,8 @@ const calcFunctionBtns = document
           console.log('MC');
           break;
         case 'M+':
-          console.log('M+');
+          
+        console.log('M+');
           break;
         case 'M-':
           console.log('M-');
@@ -126,19 +127,22 @@ const percentageBtn = document
     }
     totaldiv.innerHTML = number;
     dotPressed = true;
-  })
+  });
 
-function testVariables() {
-  console.clear();
-  console.log('number: ' + number);
-  console.log('newnumber: ' + newnumber);
-  console.log('operator: ' + operator);
-  console.log('selectedOperator: ' + selectedOperator.innerHTML);
-  console.log('memoryRecall: ' + memoryRecall);
-  console.log('equalJustPressed: ' + equalJustPressed);
-  console.log('operatorJustPressed: ' + operatorJustPressed);
-  console.log('calculatedTotal: ' + calculatedTotal);
-}
+  const clearEntryBtn = document
+  .getElementById('clear')
+  .addEventListener('click', function (){
+    number = '';
+    totaldiv.innerHTML = '0';
+  });
+
+  const clearAll = document
+  .getElementById('clearall')
+  .addEventListener('click', function () {
+    newnumber = '';
+    resetValue();
+  });
+
 
 function resetValue() {
   number = '';
@@ -150,4 +154,16 @@ function resetValue() {
   //$('#mr, #mc, #ms').addClass('disableClick');
   dotPressed = false;
   testVariables();
+}
+
+function testVariables() {
+  console.clear();
+  console.log('number: ' + number);
+  console.log('newnumber: ' + newnumber);
+  console.log('operator: ' + operator);
+  console.log('selectedOperator: ' + selectedOperator.innerHTML);
+  console.log('memoryRecall: ' + memoryRecall);
+  console.log('equalJustPressed: ' + equalJustPressed);
+  console.log('operatorJustPressed: ' + operatorJustPressed);
+  console.log('calculatedTotal: ' + calculatedTotal);
 }

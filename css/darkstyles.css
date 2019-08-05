@@ -72,10 +72,6 @@ body, a {
     box-shadow: inherit;
 }
 
-#calcfunctions .disableClick{
-    pointer-events: none;
-    color: #333;
-}
 
 /*Calculator buttons*/
 .btn {

@@ -1,40 +1,8 @@
-//$(document).ready(function() {
-  // document.addEventListener("DOMContentLoaded", function(event) { 
-    
-    // let number = '83940302';
-    // let newnumber = '';
-    // let memoryRecall = "";
-    // let operator = '';
-    // let plusMinus = '';
-    // let equalJustPressed = false;
-    // let dotPressed = false;
-    // let memoryJustPressed = false;
-    // let operatorJustPressed = false;
-    // let calculatedTotal = '';
-    // const totaldiv = document.getElementById('total');
-    // const selectedOperator = document.getElementById('selectedOperator');
-    // const operatorEnum = {
-    //     '÷': 'divide',
-    //     '×': 'multiply',
-    //     '−': 'subtract',
-    //     '+': 'add'
-    // };
-
-    
-    // const testNumLength = function(number) {
-    //     if (number.length > 8) {
-    //         totaldiv.innerText = number.substr(number.length - 8, 8);
-    //         if (number.length > 15) {
-    //             number = "";
-    //             totaldiv.innerText = 'Err';
-    //         }
-    //     }
-    // };
 
 
 
 
-    // totaldiv.innerText = '0';
+
 
 //     $('#calcfunctions a').click(function() {
 //         switch ($(this).text()) {
@@ -66,60 +34,10 @@
 
 //     });
 
-//     $('.plusminus').click(function() {
-//         /*test if plusminus is in initial state, which represents positive or plus */
-//         if (plusMinus === '') {
-//             number = '-' + number;
-//             totaldiv.text( number);
-//             plusMinus = '-';
-//         } else {
-//             number = number.replace('-', '');
-//             totaldiv.text( number);
-//             plusMinus = '';
-//         }
-//     });
 
 
 
-//     $('.numbers').click(function() {
-// /*        If the equal key was just pressed clean up is needed:
-//             reset the number to key that was just pressed
-//             reset screen to number variable value
-//             set equalJustPressed to false*/
-//         if (equalJustPressed) {
-//             number = $(this).text();
-//             totaldiv.text(number);
-//             equalJustPressed = false;
-//             return;
-//         }
-        
-//         if(number === '' && $(this).text() === '0'){
-//             return;
-//         }
 
-//         number += $(this).text();
-//         totaldiv.innerHTML = number;
-//         testNumLength(number);
-//         operatorJustPressed = false;
-//         /*TEST Variables in console*/
-//         testVariables();
-//     });
-
-//     $('.percentage').click(function() {
-        
-//         if (newnumber === '') {
-//             resetValue();
-//         } else if (number === '') {
-//             number = ((parseFloat(newnumber) * parseFloat(newnumber)) / 100).toString();
-//             totaldiv.text(number);
-//         } else {
-//             number = ((parseFloat(newnumber) * parseFloat(number)) / 100).toString();
-//             totaldiv.text(number);
-//         }
-
-//         /*TEST Variables in console*/
-//         testVariables();
-//     });
 
 //     $('.operators').click(function() {
 //         if (memoryJustPressed) {
@@ -187,20 +105,7 @@
 //         resetValue();
 //     });
     
-//     $('.dot').click(function(){
-      
-//         if (dotPressed){
-//           return;
-//         }
-//         if(number === ''){
-//             number = '0' + $(this).text();
-//         }else{
-//             number += $(this).text();
-//         }
-//         totaldiv.text(number);
-//         dotPressed = true;
-        
-//     });
+
 
 //     /*User clicks the equal key */
 //     $('.equal').click(function() {
@@ -244,27 +149,3 @@
 //         testVariables();
 //     }); //END $(".equal").click()
 
-//     function resetValue() {
-//         number = "";
-//         dotPressed = false;
-//         totaldiv.text('0');
-//         selectedOperator.text('');
-//         equalJustPressed = false;
-//         operatorJustPressed = false;
-//         $('#mr, #mc, #ms').addClass('disableClick');
-//         dotPressed = false;
-//         testVariables();
-//     }
-
-    // function testVariables() {
-    //     console.clear();
-    //     console.log('number: ' + number);
-    //     console.log('newnumber: ' + newnumber);
-    //     console.log('operator: ' + operator);
-    //     console.log('selectedOperator: ' + selectedOperator.text());
-    //     console.log('memoryRecall: ' + memoryRecall);
-    //     console.log('equalJustPressed: ' + equalJustPressed);
-    //     console.log('operatorJustPressed: ' + operatorJustPressed);
-    //     console.log('calculatedTotal: ' + calculatedTotal);
-    // }
- // });
